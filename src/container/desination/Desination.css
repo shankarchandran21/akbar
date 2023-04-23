@@ -60,3 +60,25 @@
   grid-template-columns: 1fr 1fr;
   padding: 1.50rem 0;
 }
+
+@media screen and (max-width:550px) {
+  .desination__navbar-title{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .desination__container-links p{
+    display: none;
+  }
+  .desination__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .desination__container-main{
+       margin: 0rem 1rem;
+  }
+ 
+}
+

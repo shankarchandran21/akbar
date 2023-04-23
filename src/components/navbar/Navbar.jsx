@@ -26,18 +26,28 @@ const filterData =(value)=>{
 }
    
  const cardStyle = {
-    transform: `translateX(${position * 100}%)`,
+   transition:' transform',
+  transform: `translateX(${position * 100}%)`,
+     transitionDuration: `1.50s`,
+ 
   };
   
   
   const handlePrev = () => {
-    setPosition(position - 1);
+
+      if(position<= -(datas.length-1)){
+      setPosition(0)
+    }else{
+      setPosition(position -1)
+    }
   };
   
   const handleNext = () => {
-    setPosition(position + 1);
+      if(position <0){
+      setPosition(position + 1)
+    }
   };
-
+console.log(position)
 
   return (<div className='border'>
     <div className='  section__margin'>
@@ -56,7 +66,7 @@ const filterData =(value)=>{
           </div>
           <div className='deals__navbar__slider'>
             <p>View All Deals</p>
-              <IoIosArrowDropleftCircle onClick={handlePrev} fontSize={32}/>
+              <IoIosArrowDropleftCircle onClick={handlePrev } fontSize={32}/>
               <IoIosArrowDroprightCircle onClick={handleNext}  fontSize={32}/>
           </div>
       </div>

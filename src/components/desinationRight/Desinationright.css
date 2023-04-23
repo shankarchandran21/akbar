@@ -54,4 +54,10 @@ color: white;
 margin-left: 2rem;
 margin-top: 13rem;
 }
-
+@media screen and (max-width:550px) {
+  .desinationright___content-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
